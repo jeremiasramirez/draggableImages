@@ -9,6 +9,7 @@
     display:  grid;
     justify-content: center;
     border: 1px solid #eee;
+    justify-items: center;
     grid-template-rows: 100px 100px 100px;
     grid-template-columns: 100px 100px 100px 100px;
     height: 320px;
@@ -32,12 +33,15 @@
     cursor: pointer;
 
 }
+.placeImage img{
+    width: 70px;
+}
 .placeImage{
     width: 100px;
     height: 100px;
     margin: .5em;
     border: 1px solid #eee;
-    transition: 5s;
+    transition: 1500ms;
     display: grid;
     justify-items: center;
     align-content: center;
@@ -46,12 +50,16 @@
     color: #ddd;
 
 }
-.placeImage:hover{
-    background-color: rgba(10%, 80%, 10%, 70%);
+.background{
     transition: .5s;
+    border-radius: 5px;
+    background-color: rgba(10%, 80%, 10%, 70%);
+
+}
+.placeImage:hover{
 
     cursor: pointer;
     transform: scale(1.1);
     transform-origin: center;
-    border-color: #ddd;
+    border-color: white;
 }
