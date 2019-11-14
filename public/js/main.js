@@ -81,17 +81,39 @@
 
             },false);
 
+
+
+
+
+
             let counterDrop = 0;
             allPlaces[img].addEventListener("drop", function(e){
 
-                counterDrop+=1;
+                let dataHtml = "<img src="+e.target.src+">";
 
-                if( (counterDrop <= 1) ){
-                    allPlaces[img].innerHTML = e.dataTransfer.getData("Text");
-                }
-                else{
-                    floatNotificationError("Imposible reemplazar")
-                }
+                e.dataTransfer.setData("Text", dataHtml);
+
+                allPlaces[img].innerHTML = e.dataTransfer.getData("Text");
+
+
+                allPlaces[img].addEventListener("dragstart", function(e){
+
+                    let moveData = "<img src="+e.target.src+">";
+
+                    e.dataTransfer.setData("Text", moveData);
+
+                    /*
+                    * removing img when moved
+                    * */
+                    setTimeout(()=>{
+
+                        e.target.remove();
+
+                    },500);
+
+
+
+                }, false);
 
             },false);
 
