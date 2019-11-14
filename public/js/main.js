@@ -95,12 +95,10 @@
 
                 allPlaces[img].innerHTML = e.dataTransfer.getData("Text");
 
-
                 allPlaces[img].addEventListener("dragstart", function(e){
 
-                    let moveData = "<img src="+e.target.src+">";
-
-                    e.dataTransfer.setData("Text", moveData);
+                    let moveData = "<img src="+ e.target.src +">";
+                        e.dataTransfer.setData("Text", moveData);
 
                     /*
                     * removing img when moved
@@ -108,16 +106,13 @@
                     setTimeout(()=>{
 
                         e.target.remove();
+                        floatNotificationInfo("new place")
 
                     },500);
-
-
 
                 }, false);
 
             },false);
-
-
 
             //    end for
         }
