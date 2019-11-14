@@ -17,13 +17,15 @@
 }
 .container__places{
     display: grid;
-    grid-template-columns: 90px 90px 90px;
+    grid-template-columns: 90px 90px 90px 90px;
+    border: 1px solid #eee;
+    width: 400px;
 }
 .container__places img{
     width: 70px;
     margin-left: 1em;
     margin-right: 1em;
-    padding: .5em;
+    padding: 1em;
 
 }
 .container__places img:hover{
@@ -35,6 +37,7 @@
 }
 .placeImage img{
     width: 70px;
+
 }
 .placeImage{
     width: 100px;
@@ -62,4 +65,9 @@
     transform: scale(1.1);
     transform-origin: center;
     border-color: white;
+}
+
+.itemImages{
+    margin-left: 1em;
+    margin-right: 1em;
 }
