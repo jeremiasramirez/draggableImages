@@ -48,22 +48,23 @@
             let counterLeave = 0;
             allPlaces[img].addEventListener("dragleave", function(e){
 
-                counterLeave += 1;
-                if( !(counterLeave <= 1) ){
+                    //
+                    // counterLeave += 1;
+                    // if( !(counterLeave <= 1) ){
 
-                    /*
-                    * style
-                    * */
-                    allPlaces[img].style.backgroundColor= "red";
-                    allPlaces[img].textContent = "Limitado";
-                    allPlaces[img].innerHTML = "";
-
-                    setInterval(()=>{
-                        allPlaces[img].innerHTML = "Limitado";
-                    },1000);
-                }
-
-                allPlaces[img].classList.remove("background");
+                        /*
+                        * style
+                        * */
+                    //     allPlaces[img].style.backgroundColor= "red";
+                    //     allPlaces[img].textContent = "Limitado";
+                    //     allPlaces[img].innerHTML = "";
+                    //
+                    //     setInterval(()=>{
+                    //         allPlaces[img].innerHTML = "Limitado";
+                    //     },1000);
+                    // }
+                    //
+                    // allPlaces[img].classList.remove("background");
 
             },false);
 
