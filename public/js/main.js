@@ -45,11 +45,29 @@
             /*
             * verifying if item is go of place
             * */
+            let counterLeave = 0;
             allPlaces[img].addEventListener("dragleave", function(e){
+
+                counterLeave += 1;
+                if( !(counterLeave <= 1) ){
+
+                    /*
+                    * style
+                    * */
+                    allPlaces[img].style.backgroundColor= "red";
+                    allPlaces[img].textContent = "Limitado";
+                    allPlaces[img].innerHTML = "";
+
+                    setInterval(()=>{
+                        allPlaces[img].innerHTML = "Limitado";
+                    },1000);
+                }
 
                 allPlaces[img].classList.remove("background");
 
             },false);
+
+
 
 
             /*
@@ -63,12 +81,11 @@
             },false);
 
             let counterDrop = 0;
-
             allPlaces[img].addEventListener("drop", function(e){
 
                 counterDrop+=1;
 
-                if(counterDrop <= 1){
+                if( (counterDrop <= 1) ){
                     allPlaces[img].innerHTML = e.dataTransfer.getData("Text");
                 }
                 else{
