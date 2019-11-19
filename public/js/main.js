@@ -38,8 +38,9 @@
             },false);
 
 
-            allPlaces[img].addEventListener("dragend", function(e){
+            itemImages[img].addEventListener("dragend", function(e){
                 e.preventDefault();
+                e.target.remove();
             },false);
 
             /*
