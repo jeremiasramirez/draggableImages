@@ -12,7 +12,7 @@
     justify-items: center;
     grid-template-rows: 100px 100px 100px;
     grid-template-columns: 100px 100px 100px 100px;
-    height: 320px;
+    height: 350px;
     width: 450px;
 }
 .container__places{
@@ -22,7 +22,7 @@
     width: 400px;
 }
 .container__places img{
-    width: 70px;
+    width: 60px;
     margin-left: 1em;
     margin-right: 1em;
     padding: 1em;
@@ -40,11 +40,12 @@
 
 }
 .placeImage{
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
     margin: .5em;
-    border: 1px solid #eee;
+    margin-right: -10px;
     transition: 1500ms;
+    text-align: center;
     display: grid;
     justify-items: center;
     align-content: center;
@@ -54,8 +55,9 @@
 
 }
 .background{
-    transition: .5s;
+    transition: 1s;
     border-radius: 5px;
+    box-shadow: 1px 1px 10px 20px lightgreen;
     background-color: rgba(10%, 80%, 10%, 70%);
 
 }
